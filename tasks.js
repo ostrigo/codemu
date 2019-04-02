@@ -1,5 +1,5 @@
 /*
- * Задачи на математические функции JavaScript
+ ! Задачи на математические функции JavaScript
  */
 
 /* 
@@ -72,3 +72,69 @@
 //   fact *= i;
 // }
 // console.log({ fact });
+
+/*
+ ! Задачи на функции работы со строками в JavaScript
+ */
+
+// ? Работа с length, substr, substring, slice. Работа с indexOf
+
+// const str = "я учу javascript!";
+// console.log(str.length);
+
+// const str = "я учу javascript!";
+// console.log(str.substr(2, 3));
+// console.log(str.substring(2, 5));
+// console.log(str.slice(2, -1));
+
+// const str = "Дана переменная str, в которой хранится какой-либо текст.";
+// const n = 10;
+// let result;
+// if (str.length > n) {
+//   result = str.substr(0, n) + "...";
+// } else {
+//   result = str;
+// }
+
+// console.log({ result });
+
+// const str = "Я-учу-javascript!";
+// console.log(str.replace(/-/g, "!"));
+
+// const date = "2025-12-31";
+// const arr = date.split("-");
+// const newDate = `${arr[2]}.${arr[1]}.${arr[0]}`;
+// console.log(newDate);
+
+// const arr = ["я", "учу", "javascript", "!"];
+// console.log(arr.join("+"));
+
+// const str = "преобразуйте первую букву строки в верхний регистр";
+// console.log(str[0].toUpperCase() + str.slice(1));
+
+// const str = "преобразуйте первую букву каждого слова строки в верхний регистр.";
+// const newStr = str
+//   .split(" ")
+//   .map(e => e[0].toUpperCase() + e.slice(1))
+//   .join(" ");
+// console.log(newStr);
+
+// const str = "var_test_text_some";
+// const arr = str.split("_");
+// for (let i = 1; i < arr.length; i++) {
+//   arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+// }
+// console.log(arr.join(""));
+
+// const str = "var_test_text_some_cool";
+// const newStr = str
+//   .split("_")
+//   .map((e, i) => {
+//     if (i >= 1) {
+//       return e[0].toUpperCase() + e.slice(1);
+//     } else {
+//       return e;
+//     }
+//   })
+//   .join("");
+// console.log(newStr);
