@@ -262,3 +262,55 @@
 /* 
 ! Задачи на приемы работы с массивами на JavaScript http://code.mu/tasks/javascript/base/priemy-raboty-s-massivami-na-javascript.html
  */
+// ? Заполните массив следующим образом: в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее.
+// const arr = [];
+// let str = "x";
+// for (let i = 0; i < 10; i++) {
+//   arr.push(str);
+//   str += "x";
+// }
+// console.log(arr);
+
+// ? Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', в третий '333' и так далее.
+// const arr = [];
+// for (let i = 1; i < 10; i++) {
+//   let str = "";
+//   for (let j = 1; j <= i; j++) {
+//     str += i;
+//   }
+//   arr.push(str);
+// }
+// console.log(arr);
+
+// ? Сделайте функцию arrayFill, которая будет заполнять массив заданными значениями. Первым параметром функция принимает значение, которым заполнять массив, а вторым - сколько элементов должно быть в массиве. Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
+// const arrayFill = (val, len) => {
+//   const arr = [];
+//   for (let i = 0; i < len; i++) {
+//     arr.push(val);
+//   }
+//   return arr;
+// };
+// console.log(arrayFill("c", 10));
+
+// ? Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+// const arr = [1, 2, 3, 4, 5, 6];
+// let sum = 0;
+// let count = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+//   count++;
+//   if (sum >= 10) break;
+// }
+// console.log(count);
+
+// const array = [1, 2, 3, 4, 5, 6];
+// const func = arr => {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//     if (sum > 10) return i + 1;
+//   }
+// };
+// console.log(func(array));
+
+// ? Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке. Показать решение.
