@@ -1,3 +1,4 @@
+"use strict";
 /*
  ! Задачи на математические функции JavaScript
  */
@@ -142,3 +143,122 @@
 /* 
 ! Задачи на функции работы с массивами в JavaScript
 */
+// const a = [3, 4, 1, 2, 11, 22, 33, 7];
+// a.sort((a, b) => b - a);
+// console.log(a);
+
+// const obj = { js: "test", jq: "hello", css: "world" };
+// console.log(Object.keys(obj));
+
+/* 
+! Практика на комбинации стандартных функций JavaScript
+ */
+// ? Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения.
+// const str1 = "сделайте заглавным первый символ этой строки не используя цикл";
+// console.log(str1[0].toUpperCase() + str1.slice(1));
+
+// let str2 = "hello";
+// str2 = str2.split("");
+// str2[0] = str2[0].toUpperCase();
+// const res = str2.join("");
+// console.log(res);
+
+// ? Дана строка, например, '123456'. Переверните эту строку (сделайте из нее '654321') не используя цикл.
+// const str = "123456";
+// const res = str
+//   .split("")
+//   .reverse()
+//   .join("");
+// console.log(res);
+
+// ? Дано число, например, 3751. Отсортируйте цифры в нем (сделайте из него 1357) не используя цикл.
+// let num = 3751;
+// const arr = +num
+//   .toString()
+//   .split("")
+//   .sort()
+//   .join("");
+// console.log(arr);
+
+// ? Проверьте, что строка начинается на http://.
+// const exp = window.location.href.indexOf("http://");
+// console.log(!Boolean(exp) ? "est popadanie" : "net");
+
+// const str = "index.html";
+// const regexp = /(html)$/gi;
+// console.log(str.search(regexp));
+// console.log(Boolean(str.search(regexp)));
+
+/* 
+! Задачи на приемы работы с флагами на JavaScript
+ */
+// ? Дан массив с числами. Проверьте, что в этом массиве есть число 5. Если есть - выведите 'да', а если нет - выведите 'нет'.
+// const arr = [1, 2, 3, 4, 5, 5, 7, 8];
+// const flag = arr.some(e => e === 5);
+// console.log(flag ? "est" : "net");
+
+// ? Дано число, например 31. Проверьте, что это число не делится ни на одно другое число кроме себя самого и единицы. То есть в нашем случае нужно проверить, что число 31 не делится на все числа от 2 до 30. Если число не делится - выведите 'false', а если делится - выведите 'true'.
+// const num = 31;
+// let flag = false;
+// for (let i = 2; i < num; i++) {
+//   if (num % i === 0) {
+//     flag = true;
+//     break;
+//   }
+// }
+// console.log(flag);
+
+// ? Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. Если есть - выведите 'да', а если нет - выведите 'нет'.
+// const arr = [1, 2, 3, 4, 5, 6, 7, 7];
+// let flag = false;
+// for (let i = 1; i < arr.length; i++) {
+//   console.log(arr[i]);
+//   if (arr[i] === arr[i - 1]) {
+//     flag = true;
+//     break;
+//   }
+// }
+// console.log(flag ? "да" : "нет");
+
+/* 
+! Задачи на приемы работы с циклами на JavaScript 
+*/
+
+// let str = "";
+// for (let i = 9; i > 0; i--) {
+//   str += i;
+// }
+// console.log(str);
+
+// let str = "-";
+// for (let i = 1; i < 10; i++) {
+//   str += i + "-";
+// }
+// console.log(str);
+
+// ? Нарисуйте пирамиду, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5
+// let str = "";
+// for (let i = 0; i < 20; i++) {
+//   str += "x";
+//   console.log(str + "\n");
+// }
+
+// ? С помощью двух вложенных циклов нарисуйте следующую пирамидку
+// for (let i = 1; i < 10; i++) {
+//   let str = "";
+//   for (let j = 1; j <= i; j++) {
+//     str += i;
+//   }
+//   console.log(str + "\n");
+// }
+
+// ? Нарисуйте пирамиду, как показано на рисунке, воспользовавшись циклом for
+// let str = "";
+// for (let i = 0; i < 10; i++) {
+//   str += "xx";
+//   console.log(str + "\n");
+// }
+
+/* 
+! Задачи на приемы работы с массивами на JavaScript
+ */
