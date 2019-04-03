@@ -260,5 +260,5 @@
 // }
 
 /* 
-! Задачи на приемы работы с массивами на JavaScript
+! Задачи на приемы работы с массивами на JavaScript http://code.mu/tasks/javascript/base/priemy-raboty-s-massivami-na-javascript.html
  */
