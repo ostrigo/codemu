@@ -314,3 +314,37 @@
 // console.log(func(array));
 
 // ? Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке. Показать решение.
+// const arr1 = [1, 2, 3, 4, 5, 6];
+// const arr2 = [];
+// for (let i = arr1.length - 1; i >= 0; i--) {
+//   arr2.push(arr1[i]);
+// }
+// console.log(arr2);
+
+// ? Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
+// const arr = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
+// const sum = arr
+//   .join(",")
+//   .split(",")
+//   .map(e => +e)
+//   .reduce((acc, curr) => acc + curr);
+// console.log(sum);
+
+/* 
+! Правильное использование пользовательских функци - http://code.mu/tasks/javascript/base/pravilnoe-ispolzovanie-polzovatelskih-funkcij-javascript.html
+ */
+// ? Дан массив с числами. Создайте из него новый массив, где останутся лежать только положительные числа.
+// const arr = [-10, 1, 2, 3, -1, -2, -3];
+// const positive = arr => arr.filter(e => e > 0);
+// console.log(positive(arr));
+
+// ? Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
+const getDigitsSum = num => {
+  let sum = 0;
+  for (const i of num.toString()) {
+    sum += Number(i);
+  }
+  return sum;
+};
+
+// ? Найдите все года от 1 до 2019, сумма цифр которых равна 13. Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи.
