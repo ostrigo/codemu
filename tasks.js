@@ -339,12 +339,85 @@
 // console.log(positive(arr));
 
 // ? Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
-const getDigitsSum = num => {
-  let sum = 0;
-  for (const i of num.toString()) {
-    sum += Number(i);
-  }
-  return sum;
-};
+// const getDigitsSum = num => {
+//   let sum = 0;
+//   for (const i of num.toString()) {
+//     sum += Number(i);
+//   }
+//   return sum;
+// };
 
 // ? Найдите все года от 1 до 2019, сумма цифр которых равна 13. Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи.
+// for (let i = 1; i <= 2019; i++) {
+//   getDigitsSum(i);
+//   if (getDigitsSum(i) === 13) console.log(i);
+// }
+
+// ? Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел.
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const evenArr = arr.filter(e => e % 2 === 0);
+// console.log(evenArr);
+
+// ? Сделайте функцию getDivisors, которая параметром принимает число и возвращает массив его делителей (чисел, на которое делится данное число).
+// const getDivisors = num => {
+//   const arr = [];
+//   for (let i = 1; i <= num; i++) {
+//     if (num % i === 0) arr.push(i);
+//   }
+//   return arr;
+// };
+// console.log(getDivisors(128));
+
+/* 
+! Продвинутая работа с пользовательскими функциями в JavaScript - http://code.mu/tasks/javascript/base/prodvinutaya-rabota-s-polzovatelskimi-funkciyami-v-javascript.html
+ */
+// ? Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл.
+// const arr = [1, 2, 3, 4, 5, 6];
+// const print = arrf => {
+//   console.log(arrf.shift());
+//   if (arrf.length != 0) {
+//     print(arrf);
+//   }
+// };
+// print(arr);
+
+// ? Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
+// const num = 555555555555555;
+// const getDigitsSum = n => {
+//   let sum = 0;
+//   for (const i of n.toString()) {
+//     sum += Number(i);
+//   }
+//   return sum;
+// };
+
+// const check = n => {
+//   while (getDigitsSum(n) > 9) {
+//     console.log(n);
+//     n = getDigitsSum(n);
+//     check(n);
+//   }
+//   return n;
+// };
+
+// console.log(check(num));
+
+/* 
+! Задачи на основы работы с DOM в JavaScript - http://code.mu/tasks/javascript/dom/osnovy-raboty-s-dom-v-javascript.html
+ */
+// ? Задача. Повторите поведение кнопки по нажатию на нее (она выводит алертом содержимое инпута, возведенное в квадрат):
+
+// const btn = document.getElementById("btn");
+// btn.addEventListener("click", e => {
+//   const input = document.getElementById("input");
+//   const num = Number(input.value);
+//   console.log(num * num);
+// });
+// ? Повторите поведение кнопки по нажатию на нее (она осуществляет обмен содержимым между двумя инпутами, можете понажимать на нее несколько раз или вручную сменить содержимое инпутов):
+
+// const btn = document.getElementById("btn");
+// btn.addEventListener("click", () => {
+//   let input1 = document.getElementById("input1");
+//   let input2 = document.getElementById("input2");
+//   [input1.value, input2.value] = [input2.value, input1.value];
+// });
