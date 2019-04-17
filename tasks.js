@@ -3,8 +3,8 @@
  ! Задачи на математические функции JavaScript
  */
 
-/* 
-? 2. Даны переменные a и b. Проверьте, что a делится без остатка на b. Если это так - выведите 'Делится' и результат деления, иначе выведите 'Делится с остатком' и остаток от деления. 
+/*
+? 2. Даны переменные a и b. Проверьте, что a делится без остатка на b. Если это так - выведите 'Делится' и результат деления, иначе выведите 'Делится с остатком' и остаток от деления.
 */
 
 // let a = prompt("Введите число a", 10);
@@ -140,7 +140,7 @@
 //   .join("");
 // console.log(newStr);
 
-/* 
+/*
 ! Задачи на функции работы с массивами в JavaScript
 */
 // const a = [3, 4, 1, 2, 11, 22, 33, 7];
@@ -150,7 +150,7 @@
 // const obj = { js: "test", jq: "hello", css: "world" };
 // console.log(Object.keys(obj));
 
-/* 
+/*
 ! Практика на комбинации стандартных функций JavaScript
  */
 // ? Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения.
@@ -189,7 +189,7 @@
 // console.log(str.search(regexp));
 // console.log(Boolean(str.search(regexp)));
 
-/* 
+/*
 ! Задачи на приемы работы с флагами на JavaScript
  */
 // ? Дан массив с числами. Проверьте, что в этом массиве есть число 5. Если есть - выведите 'да', а если нет - выведите 'нет'.
@@ -220,8 +220,8 @@
 // }
 // console.log(flag ? "да" : "нет");
 
-/* 
-! Задачи на приемы работы с циклами на JavaScript 
+/*
+! Задачи на приемы работы с циклами на JavaScript
 */
 
 // let str = "";
@@ -259,7 +259,7 @@
 //   console.log(str + "\n");
 // }
 
-/* 
+/*
 ! Задачи на приемы работы с массивами на JavaScript http://code.mu/tasks/javascript/base/priemy-raboty-s-massivami-na-javascript.html
  */
 // ? Заполните массив следующим образом: в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее.
@@ -330,7 +330,7 @@
 //   .reduce((acc, curr) => acc + curr);
 // console.log(sum);
 
-/* 
+/*
 ! Правильное использование пользовательских функци - http://code.mu/tasks/javascript/base/pravilnoe-ispolzovanie-polzovatelskih-funkcij-javascript.html
  */
 // ? Дан массив с числами. Создайте из него новый массив, где останутся лежать только положительные числа.
@@ -368,7 +368,7 @@
 // };
 // console.log(getDivisors(128));
 
-/* 
+/*
 ! Продвинутая работа с пользовательскими функциями в JavaScript - http://code.mu/tasks/javascript/base/prodvinutaya-rabota-s-polzovatelskimi-funkciyami-v-javascript.html
  */
 // ? Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл.
@@ -402,7 +402,7 @@
 
 // console.log(check(num));
 
-/* 
+/*
 ! Задачи на основы работы с DOM в JavaScript - http://code.mu/tasks/javascript/dom/osnovy-raboty-s-dom-v-javascript.html
  */
 // ? Задача. Повторите поведение кнопки по нажатию на нее (она выводит алертом содержимое инпута, возведенное в квадрат):
@@ -421,3 +421,14 @@
 //   let input2 = document.getElementById('input2');
 //   [input1.value, input2.value] = [input2.value, input1.value];
 // });
+// ? Задачи для решения
+// const btn = document.querySelector('#btn');
+// btn.addEventListener('click', e => {
+//   e.target.innerText = Number(e.target.innerText) + 1;
+// });
+
+/*
+! Задачи на работу с элементами страницы в JavaScript - http://code.mu/tasks/javascript/dom/rabota-s-elementami-stranicy-v-javascript.html
+ */
+// ? При нажатии на кнопку текст в абзаце поменяется.
+const btn = document.getElementsByTagName('button');
