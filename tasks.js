@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
  ! Задачи на математические функции JavaScript
  */
@@ -415,9 +415,9 @@
 // });
 // ? Повторите поведение кнопки по нажатию на нее (она осуществляет обмен содержимым между двумя инпутами, можете понажимать на нее несколько раз или вручную сменить содержимое инпутов):
 
-// const btn = document.getElementById("btn");
-// btn.addEventListener("click", () => {
-//   let input1 = document.getElementById("input1");
-//   let input2 = document.getElementById("input2");
+// const btn = document.getElementById('btn');
+// btn.addEventListener('click', () => {
+//   let input1 = document.getElementById('input1');
+//   let input2 = document.getElementById('input2');
 //   [input1.value, input2.value] = [input2.value, input1.value];
 // });
