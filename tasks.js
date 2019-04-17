@@ -432,3 +432,9 @@
  */
 // ? При нажатии на кнопку текст в абзаце поменяется.
 const btn = document.getElementsByTagName('button');
+console.log('TCL: btn', btn);
+
+btn[0].addEventListener('click', () => {
+  document.querySelector('p').innerHTML =
+    'Ку-ку!' + 'А я ' + '<b>' + 'жирный' + '</b>' + '!';
+});
