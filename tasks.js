@@ -431,10 +431,9 @@
 ! Задачи на работу с элементами страницы в JavaScript - http://code.mu/tasks/javascript/dom/rabota-s-elementami-stranicy-v-javascript.html
  */
 // ? При нажатии на кнопку текст в абзаце поменяется.
-const btn = document.getElementsByTagName('button');
-console.log('TCL: btn', btn);
+// const btn = document.querySelector('button');
+// btn.removeAttribute('class');
 
-btn[0].addEventListener('click', () => {
-  document.querySelector('p').innerHTML =
-    'Ку-ку!' + 'А я ' + '<b>' + 'жирный' + '</b>' + '!';
-});
+/* 
+! Задачи на даты в JavaScript - http://code.mu/tasks/javascript/dom/rabota-s-datami-v-javascript.html
+ */
