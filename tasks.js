@@ -437,3 +437,61 @@
 /* 
 ! Задачи на даты в JavaScript - http://code.mu/tasks/javascript/dom/rabota-s-datami-v-javascript.html
  */
+// ? Работа с new Date
+// const now = new Date();
+// const plusZero = num => {
+//   return num > 0 && num < 10 ? '0' + num : num;
+// };
+// console.log(
+//   `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()} ${now.getDate()}.${plusZero(
+//     now.getMonth() + 1
+//   )}.${now.getFullYear()}`
+// );
+// ? Работа с getDay
+// ? Выведите на экран текущий день недели (словом, по-русски). Создайте для этого вспомогательную функцию showDay, которая параметром принимает число, а возвращает день недели по-русски.
+// const now = new Date();
+// const day = now.getDay();
+// const showDay = day => {
+//   const days = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+//   return days[day];
+// };
+// console.log(showDay(5));
+// const date = new Date('2015-01-07');
+// const day = date.getDay();
+// console.log(showDay(day));
+// ? Выведите на экран количество секунд, которое осталось до конца дня.
+// const now = new Date().getTime();
+// const eod = new Date('2019-04-19T23:59:59').getTime();
+// console.log(Math.floor((eod - now) / 1000));
+/* 
+! Задачи на работу с таймерами в JavaScript - http://code.mu/tasks/javascript/dom/rabota-s-tajmerami-v-javascript.html
+*/
+// ? Создайте отсчет от 0 до бесконечности:
+// const btn = document.querySelector('button');
+// btn.addEventListener('click', () => {
+//   const timer = () => {
+//     const p = document.querySelector('p');
+//     console.log('TCL: timer -> p', p);
+//     p.textContent = Number(p.textContent) + 1;
+//   };
+//   window.setInterval(timer, 1000);
+// });
+// ? Создайте отсчет с кнопкой остановки:
+// const btn = document.querySelector('button');
+// const elem = document.querySelector('p');
+// let id;
+// const start = () => {
+//   id = setInterval(() => {
+//     elem.textContent = Number(elem.textContent) + 1;
+//   }, 1000);
+//   btn.removeEventListener('click', start);
+//   btn.addEventListener('click', stop);
+//   btn.textContent = 'stop';
+// };
+// const stop = () => {
+//   clearInterval(id);
+//   btn.removeEventListener('click', stop);
+//   btn.addEventListener('click', start);
+//   btn.textContent = 'start';
+// };
+// btn.addEventListener('click', start);
