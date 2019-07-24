@@ -224,7 +224,7 @@
 ! Задачи на приемы работы с циклами на JavaScript
 */
 
-// let str = "";
+// let str = '';
 // for (let i = 9; i > 0; i--) {
 //   str += i;
 // }
@@ -237,26 +237,26 @@
 // console.log(str);
 
 // ? Нарисуйте пирамиду, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5
-// let str = "";
+// let str = '';
 // for (let i = 0; i < 20; i++) {
-//   str += "x";
-//   console.log(str + "\n");
+//   str += 'x';
+//   console.log(str + '\n');
 // }
 
 // ? С помощью двух вложенных циклов нарисуйте следующую пирамидку
 // for (let i = 1; i < 10; i++) {
-//   let str = "";
+//   let str = '';
 //   for (let j = 1; j <= i; j++) {
 //     str += i;
 //   }
-//   console.log(str + "\n");
+//   console.log(str + '\n');
 // }
 
 // ? Нарисуйте пирамиду, как показано на рисунке, воспользовавшись циклом for
-// let str = "";
+// let str = '';
 // for (let i = 0; i < 10; i++) {
-//   str += "xx";
-//   console.log(str + "\n");
+//   str += 'xx';
+//   console.log(str + '\n');
 // }
 
 /*
@@ -440,12 +440,12 @@
 // ? Работа с new Date
 // const now = new Date();
 // const plusZero = num => {
-//   return num > 0 && num < 10 ? '0' + num : num;
+//   return num >= 0 && num < 10 ? '0' + num : num;
 // };
 // console.log(
-//   `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()} ${now.getDate()}.${plusZero(
-//     now.getMonth() + 1
-//   )}.${now.getFullYear()}`
+//   `${now.getHours()}:${now.getMinutes()}:${plusZero(
+//     now.getSeconds()
+//   )} ${now.getDate()}.${plusZero(now.getMonth() + 1)}.${now.getFullYear()}`
 // );
 // ? Работа с getDay
 // ? Выведите на экран текущий день недели (словом, по-русски). Создайте для этого вспомогательную функцию showDay, которая параметром принимает число, а возвращает день недели по-русски.
@@ -495,3 +495,31 @@
 //   btn.textContent = 'start';
 // };
 // btn.addEventListener('click', start);
+/* 
+! Задачи на продвинутую работу с событиями в JavaScript - http://code.mu/tasks/javascript/dom/prodvinutaya-rabota-s-sobytiyami-v-javascript.html
+ */
+// ? На addEventListener, removeEventListener
+// const elems = document.querySelectorAll('input');
+// function func() {
+//   alert(this.value);
+//   this.removeEventListener('click', func);
+// }
+// elems.forEach(e => {
+//   e.addEventListener('click', func);
+// });
+// ? Даны ссылки. Привяжите всем ссылкам событие - по наведению на ссылку в атрибут title запишется ее текст.
+// const elems = document.querySelectorAll('a');
+// function func() {
+//   this.title = this.text;
+// }
+// elems.forEach(e => {
+//   e.addEventListener('mouseover', func);
+// });
+// ? Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках
+const elems = document.querySelectorAll('a');
+function func() {
+  this.text = `${this.text} (${this.href})`;
+}
+elems.forEach(e => {
+  e.addEventListener('mouseover', func);
+});
