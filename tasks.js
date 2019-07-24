@@ -519,6 +519,7 @@
 const elems = document.querySelectorAll('a');
 function func() {
   this.text = `${this.text} (${this.href})`;
+  this.removeEventListener('mouseover', func);
 }
 elems.forEach(e => {
   e.addEventListener('mouseover', func);
