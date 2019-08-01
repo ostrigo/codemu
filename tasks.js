@@ -516,11 +516,35 @@
 //   e.addEventListener('mouseover', func);
 // });
 // ? Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках
-const elems = document.querySelectorAll('a');
-function func() {
-  this.text = `${this.text} (${this.href})`;
-  this.removeEventListener('mouseover', func);
+// const elems = document.querySelectorAll('a');
+// function func() {
+//   this.text = `${this.text} (${this.href})`;
+//   this.removeEventListener('mouseover', func);
+// }
+// elems.forEach(e => e.addEventListener('mouseover', func));
+// ? Даны инпуты. Сделайте так, чтобы все инпуты по потери фокуса проверяли свое содержимое на правильное количество символов. Сколько символов должно быть в инпуте, указывается в атрибуте data-length. Если вбито правильное количество, то граница инпута становится зеленой, если неправильное - красной.
+// const elems = document.querySelectorAll('input');
+// elems.forEach(e => e.addEventListener('blur', func));
+// function func() {
+//   console.dir(this);
+//   if (+this.selectionEnd == +this.attributes[1].value) {
+//     this.style.border = '1px solid green';
+//   } else {
+//     this.style.border = '1px solid red';
+//   }
+// }
+
+var elems = document.getElementsByTagName('input');
+for (var i = 0; i < elems.length; i++) {
+  elems[i].addEventListener('blur', func);
 }
-elems.forEach(e => {
-  e.addEventListener('mouseover', func);
-});
+
+function func() {
+  var correctLength = this.dataset.length; //правильное количество
+  var inputDataLength = this.value.length; //вбитое в инпут количество
+  if (correctLength == inputDataLength) {
+    this.style.borderColor = 'green';
+  } else {
+    this.style.borderColor = 'red';
+  }
+}
