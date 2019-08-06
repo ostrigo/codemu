@@ -526,25 +526,30 @@
 // const elems = document.querySelectorAll('input');
 // elems.forEach(e => e.addEventListener('blur', func));
 // function func() {
-//   console.dir(this);
-//   if (+this.selectionEnd == +this.attributes[1].value) {
+//   if (this.dataset.length == this.value.length) {
 //     this.style.border = '1px solid green';
 //   } else {
 //     this.style.border = '1px solid red';
 //   }
 // }
-
-var elems = document.getElementsByTagName('input');
-for (var i = 0; i < elems.length; i++) {
-  elems[i].addEventListener('blur', func);
-}
-
-function func() {
-  var correctLength = this.dataset.length; //правильное количество
-  var inputDataLength = this.value.length; //вбитое в инпут количество
-  if (correctLength == inputDataLength) {
-    this.style.borderColor = 'green';
-  } else {
-    this.style.borderColor = 'red';
-  }
-}
+/* 
+! Задачи на продвинутую работу с DOM на JavaScript - http://code.mu/tasks/javascript/dom/prodvinutaya-rabota-s-dom-na-javascript.html
+ */
+// const elem = document.querySelector('#elem');
+// alert(elem.tagName);
+// const parent = document.querySelector('ol');
+// const li = document.createElement('li');
+// li.innerHTML = 'dva';
+// parent.appendChild(li);
+// ? Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li. Сделайте так, чтобы к вставляемым li было привязано следующее событие: по нажатию на li она должна вывести на экран свой текст.
+// const ul = document.querySelector('ul');
+// const arr = [1, 2, 3, 4];
+// arr.forEach(e => {
+//   const li = document.createElement('li');
+//   li.innerHTML = e;
+//   li.addEventListener('click', func);
+//   ul.appendChild(li);
+//   function func() {
+//     alert(this.innerHTML);
+//   }
+// });
