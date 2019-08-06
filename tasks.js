@@ -553,3 +553,20 @@
 //     alert(this.innerHTML);
 //   }
 // });
+// ? Дан массив. Создайте ul через createElement, затем вставьте каждый элемент этого массива в отдельную li внутри этой ul, затем вставьте эту ul в конец body.
+// const arr = ['item1', 'item2', 'item3', 'item4'];
+// const ul = document.createElement('ul');
+// arr.forEach(e => {
+//   const li = document.createElement('li');
+//   li.innerHTML = e;
+//   ul.appendChild(li);
+// });
+// document.querySelector('body').appendChild(ul);
+// ? Дан инпут. Рядом с ним находится кнопочка "+". По нажатию на эту кнопку под нашим инпутом должен появится еще один пустой инпут.
+const btn = document.querySelector('button');
+const div = document.querySelector('.main');
+const add = () => {
+  const input = document.createElement('input');
+  div.appendChild(input);
+};
+btn.addEventListener('click', add);
