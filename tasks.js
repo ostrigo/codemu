@@ -563,10 +563,38 @@
 // });
 // document.querySelector('body').appendChild(ul);
 // ? Дан инпут. Рядом с ним находится кнопочка "+". По нажатию на эту кнопку под нашим инпутом должен появится еще один пустой инпут.
-const btn = document.querySelector('button');
-const div = document.querySelector('.main');
-const add = () => {
-  const input = document.createElement('input');
-  div.appendChild(input);
+// const btn = document.querySelector('button');
+// const div = document.querySelector('.main');
+// const add = () => {
+//   const input = document.createElement('input');
+//   div.appendChild(input);
+// };
+// btn.addEventListener('click', add);
+/* 
+! Задачи на работу с метриками на JavaScript - http://code.mu/tasks/javascript/dom/rabota-s-metrikami-na-javascript.html
+*/
+// const btn = document.querySelector('button');
+// const div = document.querySelector('#elem');
+// const func = () => alert(pageYOffset);
+// btn.addEventListener('click', func);
+/*
+! Задачи на основы работы с объектом Event на JavaScript - http://code.mu/tasks/javascript/dom/osnovy-raboty-s-objektom-event-na-javascript.html
+*/
+// const btn = document.querySelector('button');
+
+// function func(event) {
+//   event.ctrlKey
+//     ? console.log('нажат Ctrl')
+//     : event.altKey
+//     ? console.log('нажат Alt')
+//     : event.shiftKey
+//     ? console.log('нажат Shift')
+//     : console.log('ничего не нажато дополнительно');
+// }
+// btn.addEventListener('click', func);
+const input = document.querySelector('#text');
+const span = document.querySelector('#show');
+const show = e => {
+  span.innerHTML = String.fromCharCode(e.keyCode);
 };
-btn.addEventListener('click', add);
+input.addEventListener('keypress', show);
